@@ -41,9 +41,23 @@
             string companyName = "Türk Telekom";
             String company2 = "Bişey";
 
-            Console.WriteLine(companyName);
+            Console.WriteLine("Lütfen bir sayı giriniz");
 
-            
+            int sayi1 = int.Parse( Console.ReadLine());
+            Console.WriteLine("Lütfen bir sayı daha giriniz");
+            int sayi2 = Convert.ToInt32(Console.ReadLine());
+
+            int bolum = sayi1 / sayi2;
+            //  /,*,+,-
+
+            int kalan = sayi1 % sayi2;
+
+
+            Console.WriteLine($"İşlem tamamlandı. Bölme sonucu: {bolum} bu bölümden kalan ise {kalan}");
+
+
+            Console.WriteLine("Sonuçta elde edilen {0} ve {1}",bolum, kalan);
+
 
 
 
