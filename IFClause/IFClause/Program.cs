@@ -48,6 +48,19 @@
 
 
 
+            // && -> And also: Eğer ilk önerme false ise diğerlerine BAKMA! sonuç false
+            // || -> Or Else: Eğer ilk önerme true ise diğerlerine BAKMA! sonuç true
+            Console.WriteLine("Kaçıncı aydayız?");
+            int monthValue = Convert.ToInt32 (Console.ReadLine());
+            if (monthValue == 12  || monthValue == 1|| monthValue == 2)
+            {
+                Console.WriteLine("Kış");
+            }
+            else if (monthValue == 3 || monthValue == 4 || monthValue ==5)
+            {
+                Console.WriteLine("İlk bahar");
+            }
+            
 
         }
     }
