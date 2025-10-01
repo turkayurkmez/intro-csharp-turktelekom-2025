@@ -41,6 +41,7 @@ if (isInt(testValue, out outputVariable))
     Console.WriteLine($" {testValue.GetType().Name} tipindeki {testValue} değeri, tam sayıyya ({outputVariable.GetType().Name}) dönüştürüldü");
 }
 
+//ref karşılaştırması:
 int number = 8;
 normalProcess(number);
 Console.WriteLine($"normalProcess metodunu çağırdıktan sonra number değeri: {number}");
