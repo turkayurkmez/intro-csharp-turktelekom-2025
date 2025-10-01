@@ -61,13 +61,26 @@ bool isFounded(int suggested, int generated)
 int level = 1;
 while (level <= 5)
 {
+    level = playWith(level);
+}
+
+int playWith(int level)
+{
     int randomNumber = getRandomNumber(level);
+    process(randomNumber);
+    level++;
+    Console.WriteLine($"{level}. aşamaya geçtiniz... Şimdi 1 ile {level * 100} arasında sayıyı bulunuz");
+    return level;
+
+ 
+}
+
+void process(int randomNumber)
+{
     bool isCompleted = false;
     while (!isCompleted)
     {
         int suggest = getSuggestionFromUser();
-        isCompleted = isFounded(suggest, randomNumber); 
+        isCompleted = isFounded(suggest, randomNumber);
     }
-    level++;
-    Console.WriteLine($"{level}. aşamaya geçtiniz... Şimdi 1 ile {level *100} arasında sayıyı bulunuz" );
 }
