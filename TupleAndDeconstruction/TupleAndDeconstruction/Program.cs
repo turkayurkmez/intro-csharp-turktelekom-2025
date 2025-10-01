@@ -45,5 +45,5 @@ Console.WriteLine($"Tuple ile Bölme işlemi sonucu: {tupleSonuc.Item1}, kalan i
 
 (int sonucDegeri, int kalanDegeri) = decoBolme(15, 7);
 
-Console.WriteLine($"Tuple Decomposition ile Bölme işlemi sonucu: {sonucDegeri}, kalan ise {kalanDegeri} ");
+Console.WriteLine($"Tuple Deconstruction ile Bölme işlemi sonucu: {sonucDegeri}, kalan ise {kalanDegeri} ");
 
