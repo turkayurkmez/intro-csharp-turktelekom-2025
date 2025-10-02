@@ -32,4 +32,9 @@ namespace LooselyCoupled
     {
 
     }
+
+    public class Converse: IKiyafet
+    {
+
+    }
 }
