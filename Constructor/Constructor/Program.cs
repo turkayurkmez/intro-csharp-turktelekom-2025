@@ -10,6 +10,7 @@ reportGenerator1.OutputFormat = "PDF";
 reportGenerator1.OutputFormat = "HTML";
 
 ReportGenerator reportGenerator2 = new ReportGenerator("test.xlsx", "HTML", "Professional");
+//reportGenerator2.ReportFormat = "Basic";
 
 
 ReportGenerator reportGenerator3 = new ReportGenerator("a.xlsx") { OutputFormat = "PDF", ReportFormat = "Basic" };
