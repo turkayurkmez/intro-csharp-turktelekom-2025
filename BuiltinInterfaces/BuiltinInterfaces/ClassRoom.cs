@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace BuiltinInterfaces
 {
+    /*
+     * Kendi nesnemde (classRoom) foreach ile dönebilmek için IEnumerable<Student> interface'ini implemente ettik.
+     */
     public class ClassRoom : IEnumerable<Student>
     {
         private List<Student> students = new List<Student> ();
@@ -20,6 +23,7 @@ namespace BuiltinInterfaces
         {
             foreach (var student in students)
             {
+                //her student döndürdüğünde bir sonraki student'a geçmek için "yield" keyword'ü ile enumerate hale getirdik!
                 yield return student;
             }
         }
