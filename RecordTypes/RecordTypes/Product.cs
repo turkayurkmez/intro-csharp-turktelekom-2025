@@ -6,15 +6,13 @@ using System.Threading.Tasks;
 
 namespace RecordTypes
 {
-    /*
- * Eğer, nesnenizin immutable (değişmez) olmasını istiyorsanız, class yerine aşağıdaki gibi record tanımlayabilirsiniz:
- */
-    public record ProductDto(int Id, string Name, decimal Price, string Category);
+    public class Product
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public Money Price { get; set; }
 
 
-    //public record CategoryDto
-    //{
-    //    public string Name { get; set; }
-    //}
 
+    }
 }
