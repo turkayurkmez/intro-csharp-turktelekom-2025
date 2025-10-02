@@ -107,6 +107,12 @@ string oldWayClassification(object obj)
         {
             return "Uzun string";
         }
+        else
+        {
+            return "Normal uzunlukta";
+        }
+
+
     }
     else if (obj is int i)
     {
@@ -125,15 +131,20 @@ string oldWayClassification(object obj)
     return "Tanımsız tür";
 }
 
+
+Console.WriteLine(oldWayClassification("merhaba"));
 string modernWayClassification(object obj)
 {
     return obj switch
     {
         null => "Null değer",
-        string s when s.Length > 10 => "Uzun string",
+        string s when s.Length > 10 => "Uzun string",      
         string s when s.Length <= 2 => "Kısa string",
+        string => "Normal uzunlukta string",
         int i when i > 100 => "Büyük sayı",
         int i when i < 100 => "Küçük sayı",
         _ => "Tanımsız tür"
     };
 }
+
+Console.WriteLine( modernWayClassification("merhaba"));
