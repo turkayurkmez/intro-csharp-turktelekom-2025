@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using PatternMatching;
+using System.Xml;
 
 Console.WriteLine("Hello, World!");
 
@@ -148,3 +149,14 @@ string modernWayClassification(object obj)
 }
 
 Console.WriteLine( modernWayClassification("merhaba"));
+
+var car = new Car() {  Passengers= 2};
+var taxi = new Taxi() { Fares = 5  };
+var bus = new Bus() {  Capacity = 20, Riders= 2};
+var truck = new Truck();
+
+var calculator = new TotalCalculator();
+Console.WriteLine($"Araba: {calculator.CalculateTicket(car)}");
+Console.WriteLine($"Taksi: {calculator.CalculateTicket(taxi)}");
+Console.WriteLine($"Otobüs: {calculator.CalculateTicket(bus)}");
+Console.WriteLine($"Kamyon: {calculator.CalculateTicket(truck)}");
