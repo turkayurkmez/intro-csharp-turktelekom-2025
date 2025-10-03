@@ -28,7 +28,7 @@ List<Product> GetProductsByPriceWithLinq(decimal min, decimal max)
     var products = productService.GetProducts();
 
     var productsResult = from product in products
-                         where product.Price >= min && product.Price <= max                        
+                         where product.Price >= min && product.Price <= max
                          orderby product.Price
                          select product;
 
